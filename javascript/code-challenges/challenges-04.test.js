@@ -35,18 +35,18 @@ CHALLENGE 2
 
 Write a function called sortNames that takes an array of names and sorts them alphabetically. Capital letters should come before lowercase letters.
 
-For example: 'Cat' would come before 'apple'
+For example: 'Cat' would come before 'apple' arr.sort()
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  arr.sort((a,b) =>{
-    if(a < b){
-      return -1
-     } else {
-       return 1
-     }
-     
-  })
+  arr.sort()
+  // arr.sort() =>{
+  //   // if(a < b){
+  //   //   return -1
+  //   //  } 
+    
+  // })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,6 +61,7 @@ const sortNumbers = (arr) => {
   arr.sort((a,b)=>{
     return (a-b)
   }) ;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +76,7 @@ const sortBackwards = (arr) => {
   arr.sort((a,b)=>{
     return (b-a)
   }) ;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,7 +90,14 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  // arr.sort((a,b) =>{
+  //   if(a < b){
+  //     return -1
+  //    } 
+    
+  // })
+  arr.sort();
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -111,6 +120,7 @@ const sortByPrice = (arr) => {
     }
     else{ return 1}
   })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
