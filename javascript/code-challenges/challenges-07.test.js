@@ -68,7 +68,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // for(let i=0;i)
+  for(let i=0;i<=str.length;i++){
+   result.push(str.slice(i,str.length));
+  }
   return result;
 };
 
@@ -126,7 +128,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(element=>{
+    let firstSlice=element.slice(element.indexOf(' ')+1)
+  result.push(firstSlice.slice(firstSlice.indexOf(' ')+1))
+  })
   return result;
 };
 
