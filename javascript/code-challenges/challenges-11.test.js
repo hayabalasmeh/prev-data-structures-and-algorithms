@@ -163,17 +163,18 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  let newArr= [];
+  let val=[];
   data.filter(ele=>{ //object---array
    
     if(ele.gender=='female' || ele.gender=='male'){
-     return newArr.push(ele.name);
+     return val.push(ele.name);
     }
-  
+   
   })
- return `${newArr[0]} and ${newArr[1]} and ${newArr[2]}`
+//  return `${newArr[0]} and ${newArr[1]} and ${newArr[2]}`
+return val.join(' and ');
 };
-
+// console.log(findMaleAndFemale(starWarsData));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
@@ -181,9 +182,18 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let name='';
+  let shortest=data.reduce((acc,val)=>{
+  if(parseInt(val.height) < acc){
+    acc= val.height;
+    name= val.name;
+    return acc;
+  }
+  return name;
+  },0)
+ return shortest;
 };
-
+console.log(findShortest(starWarsData));
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
